@@ -42,3 +42,12 @@ function getHumanChoice() {
 }
 //TEST code with console.log
 console.log(getHumanChoice());
+
+//CREATE variables to keep score
+let computerScore = 0;
+let humanScore = 0;
+
+//CREATE function playRound with parameters humanChoice and computerChoice
+//CREATE conditionals for the rules of the game
+//OUTPUT winner or loser statements in the console
+//INCREMENT winner's score
