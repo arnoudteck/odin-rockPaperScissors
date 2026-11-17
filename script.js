@@ -112,6 +112,9 @@ function playRound(humanChoice, computerChoice) {
 
     //DISPLAY scores of both players
     console.log("computer: " + computerScore + " | user: " + humanScore);
+
+    //DISPLAY an empty line for readability
+    console.log(" ");
 }
 
 //PROGRAM function shotComputer to log user using gun
