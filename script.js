@@ -1,5 +1,10 @@
 console.log("ROCK PAPER SCISSORS");
 
+//CREATE variable for round number
+let roundNumber = 1;
+//DISPLAY current round number
+console.log("Round " + roundNumber);
+
 //CREATE variables for arguments of the playRound function
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
@@ -42,9 +47,6 @@ function getHumanChoice() {
     //RETURN humanChoice
     return humanChoice;
 }
-
-//CREATE variable for round number
-let roundNumber = 0;
 
 //CREATE variables to keep score
 let computerScore = 0;
@@ -101,8 +103,6 @@ function playRound(humanChoice, computerChoice) {
 
     //ADJUST round number
     roundNumber++;
-    //DISPLAY current round number
-    console.log("Round " + roundNumber);
 
     //DISPLAY choices of both players
     console.log("computer: " + computerChoice + " | user: " + humanChoice);
@@ -124,6 +124,8 @@ function playFullGame() {
     } else {
         playGame();
 
+        //DISPLAY current round number
+        console.log("Round " + roundNumber);
         //GET data for new round
         humanChoice = getHumanChoice();
         computerChoice = getComputerChoice();
@@ -134,9 +136,12 @@ function playFullGame() {
         } else {
             playGame();
 
+            //DISPLAY current round number
+            console.log("Round " + roundNumber);
             //GET data for new round
             humanChoice = getHumanChoice();
             computerChoice = getComputerChoice();
+
 
             //PROGRAM condition to play one more round
             if (humanChoice === "gun") {
@@ -144,6 +149,8 @@ function playFullGame() {
             } else {
                 playGame();
 
+                //DISPLAY current round number
+                console.log("Round " + roundNumber);
                 //GET data for new round
                 humanChoice = getHumanChoice();
                 computerChoice = getComputerChoice();
@@ -154,6 +161,8 @@ function playFullGame() {
                 } else {
                     playGame();
 
+                    //DISPLAY current round number
+                    console.log("Round " + roundNumber);
                     //GET data for new round
                     humanChoice = getHumanChoice();
                     computerChoice = getComputerChoice();
