@@ -61,28 +61,28 @@ function playRound(humanChoice, computerChoice) {
         console.log("Rock against Rock. It's a tie.");
     } else if (humanChoice === "rock" && computerChoice === "paper") {
         computerScore++;
-        console.log("Paper beats Rock. You lose!");
+        console.log("Paper beats Rock. You lose this round!");
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore++;
-        console.log("Rock beats Scissors. You win!");
+        console.log("Rock beats Scissors. You win this round!");
 
     //if user chooses paper
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++;
-        console.log("Paper beats Rock. You win!");
+        console.log("Paper beats Rock. You win this round!");
     } else if (humanChoice === "paper" && computerChoice === "paper") {
         console.log("Paper against Paper. It's a tie.");
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
         computerScore++;
-        console.log("Scissors beat Paper. You lose!");
+        console.log("Scissors beat Paper. You lose this round!");
 
     //if user chooses scissors
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
         computerScore++;
-        console.log("Rock beats Scissors. You lose!");
+        console.log("Rock beats Scissors. You lose this round!");
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++;
-        console.log("Scissors beat Paper. You win!");
+        console.log("Scissors beat Paper. You win this round!");
     } else if (humanChoice === "scissors" && computerChoice === "scissors") {
         console.log("Scissors against Scissors. It's a tie.");
     
@@ -90,7 +90,7 @@ function playRound(humanChoice, computerChoice) {
     //if user chooses invalid answer
     } else if (humanChoice === "!invalid answer!") {
         computerScore++;
-        console.log("Invalid answer. You lose!");
+        console.log("Invalid answer. You lose this round!");
     }
 }
 
@@ -121,3 +121,10 @@ playGame();
 playGame();
 
 //DISPLAY who won the game by programming console.log into a conditional
+if (computerScore > humanScore) {
+    console.log("GAME OVER. The machine has won. Reload this page for a rematch.");
+} else if (computerScore < humanScore) {
+    console.log("GAME OVER. You won! The machines will come for you now...");
+} else {
+    console.log("GAME OVER. It's a tie. Reload this page for a rematch.")
+}
