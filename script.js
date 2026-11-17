@@ -164,6 +164,15 @@ function playFullGame() {
                     } else {
                         playGame();
 
+                        //DISPLAY who won the game by programming console.log into a conditional
+                        if (computerScore > humanScore) {
+                            console.log("GAME OVER. The machine has won. Reload this page for a rematch.");
+                        } else if (computerScore < humanScore) {
+                            console.log("GAME OVER. You won! The machines will come for you now...");
+                        } else {
+                            console.log("GAME OVER. It's a tie. Reload this page for a rematch.")
+}
+
 
                     }
                 }  
@@ -182,14 +191,7 @@ playFullGame();
 // // playGame();
 // // playGame();
 
-// //DISPLAY who won the game by programming console.log into a conditional
-// if (computerScore > humanScore) {
-//     console.log("GAME OVER. The machine has won. Reload this page for a rematch.");
-// } else if (computerScore < humanScore) {
-//     console.log("GAME OVER. You won! The machines will come for you now...");
-// } else {
-//     console.log("GAME OVER. It's a tie. Reload this page for a rematch.")
-// }
+
 
 // console.log(getHumanChoice());
 // //CREATE variables for answers
