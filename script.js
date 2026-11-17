@@ -43,6 +43,9 @@ function getHumanChoice() {
 let computerScore = 0;
 let humanScore = 0;
 
+//CREATE function playGame
+function playGame() {
+
 //CREATE function playRound with parameters humanChoice and computerChoice
 function playRound(humanChoice, computerChoice) {
 
@@ -92,7 +95,22 @@ function playRound(humanChoice, computerChoice) {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
 
+    //DISPLAY choices of both players
     console.log("computer: " + computerChoice);
     console.log("user: " + humanChoice);
 
     playRound(humanChoice, computerChoice);
+
+
+    //DISPLAY scores of both players
+    console.log("computer: " + computerScore + " | user: " + humanScore);
+}
+
+//CALL playGame 5 times for one full game
+playGame();
+playGame();
+playGame();
+playGame();
+playGame();
+
+//DISPLAY who won the game by programming console.log into a conditional
