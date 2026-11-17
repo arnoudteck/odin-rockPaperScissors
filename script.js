@@ -86,7 +86,6 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice === "scissors" && computerChoice === "scissors") {
         console.log("Scissors against Scissors. It's a tie.");
     
-
     //if user chooses invalid answer
     } else if (humanChoice === "!invalid answer!") {
         computerScore++;
