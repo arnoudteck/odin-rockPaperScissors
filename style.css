@@ -3,10 +3,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
+    background-color: rgb(10, 37, 0);
 }
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(70, 70, 152);
+    color: rgb(0, 176, 56);
 }
