@@ -1,5 +1,9 @@
 console.log("ROCK PAPER SCISSORS");
 
+//CREATE variables for arguments of the playRound function
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
 //CREATE function getComputerChoice
 function getComputerChoice() {
     //CREATE variable computerChoice
@@ -29,7 +33,7 @@ function getHumanChoice() {
     humanChoice = humanChoice.toLowerCase();
 
     //GET rock, paper or scissors based on prompt answer; conditional to check whether answer is valid
-    if (humanChoice === "rock" | humanChoice === "paper" | humanChoice === "scissors") {
+    if (humanChoice === "rock" | humanChoice === "paper" | humanChoice === "scissors" | humanChoice === "gun") {
         humanChoice = humanChoice;
     } else {
         humanChoice = "!invalid answer!";
@@ -93,9 +97,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-    //CREATE variables for arguments of the playRound function
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+
 
     //ADJUST round number
     roundNumber++;
@@ -112,18 +114,87 @@ function playRound(humanChoice, computerChoice) {
     console.log("computer: " + computerScore + " | user: " + humanScore);
 }
 
-//CALL playGame 5 times for one full game
-playGame();
-playGame();
-playGame();
-playGame();
-playGame();
+//PROGRAM function shotComputer to log user using gun
+//PROGRAM function anotherRound to get data for each new round and start another round
 
-//DISPLAY who won the game by programming console.log into a conditional
-if (computerScore > humanScore) {
-    console.log("GAME OVER. The machine has won. Reload this page for a rematch.");
-} else if (computerScore < humanScore) {
-    console.log("GAME OVER. You won! The machines will come for you now...");
-} else {
-    console.log("GAME OVER. It's a tie. Reload this page for a rematch.")
+function playFullGame() {
+    //PROGRAM condition to play one round
+    if (humanChoice === "gun") {
+        console.log("GAME OVER. You shot the computer.");
+    } else {
+        playGame();
+
+        //GET data for new round
+        humanChoice = getHumanChoice();
+        computerChoice = getComputerChoice();
+
+        //PROGRAM condition to play one more round
+        if (humanChoice === "gun") {
+        console.log("GAME OVER. You shot the computer.");
+        } else {
+            playGame();
+
+            //GET data for new round
+            humanChoice = getHumanChoice();
+            computerChoice = getComputerChoice();
+
+            //PROGRAM condition to play one more round
+            if (humanChoice === "gun") {
+            console.log("GAME OVER. You shot the computer.");
+            } else {
+                playGame();
+
+                //GET data for new round
+                humanChoice = getHumanChoice();
+                computerChoice = getComputerChoice();
+
+                //PROGRAM condition to play one more round
+                if (humanChoice === "gun") {
+                console.log("GAME OVER. You shot the computer.");
+                } else {
+                    playGame();
+
+                    //GET data for new round
+                    humanChoice = getHumanChoice();
+                    computerChoice = getComputerChoice();
+
+                    //PROGRAM condition to play one more round
+                    if (humanChoice === "gun") {
+                    console.log("GAME OVER. You shot the computer.");
+                    } else {
+                        playGame();
+
+
+                    }
+                }  
+            }
+        }
+    }
 }
+
+playFullGame();
+
+
+// //CALL playGame 5 times for one full game
+// playGame();
+// playGame();
+// // playGame();
+// // playGame();
+// // playGame();
+
+// //DISPLAY who won the game by programming console.log into a conditional
+// if (computerScore > humanScore) {
+//     console.log("GAME OVER. The machine has won. Reload this page for a rematch.");
+// } else if (computerScore < humanScore) {
+//     console.log("GAME OVER. You won! The machines will come for you now...");
+// } else {
+//     console.log("GAME OVER. It's a tie. Reload this page for a rematch.")
+// }
+
+// console.log(getHumanChoice());
+// //CREATE variables for answers
+// const humanChoice = getHumanChoice();
+// const computerChoice = getComputerChoice();
+
+//PROGRAM conditional for gun
+// playGame();
