@@ -115,61 +115,49 @@ function playRound(humanChoice, computerChoice) {
 }
 
 //PROGRAM function shotComputer to log user using gun
+function shotComputer() {
+    console.log("GAME OVER. Dude... you shot the computer.");
+}
 //PROGRAM function anotherRound to get data for each new round and start another round
-
-function playFullGame() {
-    //PROGRAM condition to play one round
-    if (humanChoice === "gun") {
-        console.log("GAME OVER. You shot the computer.");
-    } else {
-        playGame();
+function anotherRound() {
+    playGame();
 
         //DISPLAY current round number
         console.log("Round " + roundNumber);
         //GET data for new round
         humanChoice = getHumanChoice();
         computerChoice = getComputerChoice();
+}
+
+function playFullGame() {
+    //PROGRAM condition to play one round
+    if (humanChoice === "gun") {
+        shotComputer();
+    } else {
+        anotherRound();
 
         //PROGRAM condition to play one more round
         if (humanChoice === "gun") {
-        console.log("GAME OVER. You shot the computer.");
+            shotComputer();
         } else {
-            playGame();
-
-            //DISPLAY current round number
-            console.log("Round " + roundNumber);
-            //GET data for new round
-            humanChoice = getHumanChoice();
-            computerChoice = getComputerChoice();
+            anotherRound();
 
 
             //PROGRAM condition to play one more round
             if (humanChoice === "gun") {
-            console.log("GAME OVER. You shot the computer.");
+            shotComputer();
             } else {
-                playGame();
-
-                //DISPLAY current round number
-                console.log("Round " + roundNumber);
-                //GET data for new round
-                humanChoice = getHumanChoice();
-                computerChoice = getComputerChoice();
+                anotherRound();
 
                 //PROGRAM condition to play one more round
                 if (humanChoice === "gun") {
-                console.log("GAME OVER. You shot the computer.");
+                shotComputer();
                 } else {
-                    playGame();
-
-                    //DISPLAY current round number
-                    console.log("Round " + roundNumber);
-                    //GET data for new round
-                    humanChoice = getHumanChoice();
-                    computerChoice = getComputerChoice();
+                    anotherRound();
 
                     //PROGRAM condition to play one more round
                     if (humanChoice === "gun") {
-                    console.log("GAME OVER. You shot the computer.");
+                    shotComputer();
                     } else {
                         playGame();
 
@@ -191,21 +179,3 @@ function playFullGame() {
 }
 
 playFullGame();
-
-
-// //CALL playGame 5 times for one full game
-// playGame();
-// playGame();
-// // playGame();
-// // playGame();
-// // playGame();
-
-
-
-// console.log(getHumanChoice());
-// //CREATE variables for answers
-// const humanChoice = getHumanChoice();
-// const computerChoice = getComputerChoice();
-
-//PROGRAM conditional for gun
-// playGame();
