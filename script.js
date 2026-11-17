@@ -39,6 +39,9 @@ function getHumanChoice() {
     return humanChoice;
 }
 
+//CREATE variable for round number
+let roundNumber = 0;
+
 //CREATE variables to keep score
 let computerScore = 0;
 let humanScore = 0;
@@ -95,12 +98,16 @@ function playRound(humanChoice, computerChoice) {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
 
+    //ADJUST round number
+    roundNumber++;
+    //DISPLAY current round number
+    console.log("Round " + roundNumber);
+
     //DISPLAY choices of both players
-    console.log("computer: " + computerChoice);
-    console.log("user: " + humanChoice);
+    console.log("computer: " + computerChoice + " | user: " + humanChoice);
 
+    //PLAY one round
     playRound(humanChoice, computerChoice);
-
 
     //DISPLAY scores of both players
     console.log("computer: " + computerScore + " | user: " + humanScore);
